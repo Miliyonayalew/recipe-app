@@ -7,12 +7,12 @@ class Ability
     user ||= User.new
 
     # Define User abilities
-    if user.is? :admin
-      can :manage, :all
-    else
-      can :manage, Recipe, user_id: user.id
-      can :read, :all
-    end
+    return unless user.present?
+
+    can(:manage, Food, user:)
+    can(:manage, Recipe, user:)
+
+    can :read, :all
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
