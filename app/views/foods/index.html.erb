@@ -1,0 +1,22 @@
+  <h1>Foods</h1>
+  <div class="add-food"><%= link_to "Add food", new_food_path%>
+  <% if @foods.count > 0%>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Measurment Unit</th>
+          <th>Unit Price</th>
+          <th>Quantiy</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @foods.each do |food| %>
+          <%= render food%>
+        <% end %>
+      </tbody>
+    <%else%>
+      <h2>No foods</h2>
+  <%end%>
+</div>
