@@ -2,11 +2,11 @@
     <article class="recipe_card">
       <div>
         <%=link_to recipe_path(id: recipe.id) do%>
-          <h2>Recipe <%=i+1%></h2>
+          <h2><%=recipe.name%></h2>
         <%end%>
         <% if can? :update, recipe%>
           <%= link_to 'REMOVE', recipe_path(recipe), data: {
-            turbo_method: :delete
+            turbo_method: :delete, turbo_confirm: "Are you sure?"
           } %>
         <%end%>
       </div>
