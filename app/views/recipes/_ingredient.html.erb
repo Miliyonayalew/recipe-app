@@ -1,0 +1,12 @@
+<% @foods.each do |food| %>
+<tr>
+            <td><%= food.name %></td>
+            <td><%= food.quantity %></td>
+            <td><%= food.price %></td>
+            <td>
+              <%= link_to "Remove", food_path(food),
+              data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+              %>
+            </td>
+</tr>
+<% end %>
