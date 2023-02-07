@@ -3,7 +3,9 @@
   <%@recipes.each_with_index do |recipe, i|%>
     <article class="recipe_card">
       <div>
-        <h2>Recipe <%=i+1%></h2>
+        <%=link_to recipe_path(id: recipe.id) do%>
+          <h2>Recipe <%=i+1%></h2>
+        <%end%>
         <%= link_to 'REMOVE', recipe_path(recipe), data: {
             turbo_method: :delete
           } %>
