@@ -1,16 +1,4 @@
 <section>
   <button><%=link_to "New Recipe", new_recipe_path %></button>
-  <%@recipes.each_with_index do |recipe, i|%>
-    <article class="recipe_card">
-      <div>
-        <%=link_to recipe_path(id: recipe.id) do%>
-          <h2>Recipe <%=i+1%></h2>
-        <%end%>
-        <%= link_to 'REMOVE', recipe_path(recipe), data: {
-            turbo_method: :delete
-          } %>
-      </div>
-      <p><%=recipe.description%></p>
-    </article>
-  <%end%>
+  <%= render 'shared/recipe_card'%>
 </section>
