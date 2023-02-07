@@ -1,0 +1,9 @@
+<section>
+  <h2><%=@recipe.name%></h2>
+  <div>
+    <p>Preparation time: <%=@recipe.preparation_time%> minutes</p>
+    <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+    <p>Cooking time: <%=@recipe.cooking_time%> minutes</p>
+  </div>
+  <p><%=@recipe.description%></p>
+</section>
