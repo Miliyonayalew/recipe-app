@@ -1,0 +1,12 @@
+<div class = "food-item">
+<div class="food-description">
+  <p>Food Name: <strong><%= @food.name%></strong></p>
+  <p>Measurment Unit: <strong><%=  @food.measurement_unit%></strong></p>
+  <p>Quantity: <strong><%= @food.price%></strong></p>
+  <p>Unit Price: <strong><%= @food.quantity%></strong></p>
+</div>
+  <div class = "action-wrapper">
+  <%= button_to "Delete", @food, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } }, class: "destroy-btn" if @food.user == current_user %>
+  </div>
+</div>
+

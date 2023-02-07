@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p style="color: green" class="notice"><%= notice %></p> 
+    <p style="color: green" class="alert"><%= alert %></p>
+    <%= render 'layouts/header'%>
     <%= yield %>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
