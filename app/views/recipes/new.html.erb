@@ -1,6 +1,7 @@
 <section>
   <h2>New Recipe</h2>
   <%= form_with model:Recipe do |f| %>
+    <%= render "shared/error_form_message", resource: @recipe %>
     <%= f.label :name%><br>
     <%= f.text_field :name, placeholder: 'Name', value: '', required: true%><br>
     <%= f.label :preparation_time%><br>
