@@ -2,8 +2,16 @@
   <h2><%=@recipe.name%></h2>
   <div>
     <p>Preparation time: <%=@recipe.preparation_time%> minutes</p>
-    <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+    <div class='public_logo'>
+      <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+      <div class="<%=@recipe.public ? 'public' : 'not_public'%>">
+        <span class="<%=@recipe.public ? 'public_switch' : 'not_public_switch'%>"></span>
+      </div>
+    </div>
     <p>Cooking time: <%=@recipe.cooking_time%> minutes</p>
   </div>
   <p><%=@recipe.description%></p>
+  <div>
+    <button><%=link_to "Add ingredient", new_food_path %></button>
+  </div>
 </section>
