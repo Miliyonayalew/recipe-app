@@ -7,10 +7,19 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = RecipeFood.new(recipe_food_params)
     @recipe_food.recipe_id = Recipe.find(params[:recipe_id]).id
     if @recipe_food.save
-      redirect_to recipes_path, notice: 'Food was successfully created.'
+      redirect_to recipe_path(params[:recipe_id]), notice: 'Food was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @recipe_food = RecipeFood.find(params[:id])
+    @recipe_foods = RecipeFood.where(recipe_id: @recipe_food.recipe_id).where(food_id: @recipe_food.food_id)
+    @recipe_foods.each do |recipe_food|
+      recipe_food.destroy
+    end
+    redirect_to request.referrer
   end
 
   private

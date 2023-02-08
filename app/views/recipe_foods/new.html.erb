@@ -1,6 +1,7 @@
 <section>
   <h2>New Ingredient</h2>
   <%= form_with url: recipe_recipe_foods_path, scope: :recipe_food do |f| %>
+    <%= render "shared/error_form_message", resource: @recipe_food %>
     <%= f.label :quantity%><br>
     <%= f.number_field :quantity, placeholder: 'Quantity', required: true%><br>
     <%= f.label :food_id, "Food" %><br>
