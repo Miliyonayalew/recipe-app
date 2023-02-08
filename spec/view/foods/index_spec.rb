@@ -18,4 +18,20 @@ RSpec.describe Recipe, type: :system do
     click_link 'Add food'
     expect(page).to have_current_path(new_food_path)
   end
+
+  it 'I can see foods when I add a food' do
+    sign_up
+    add_food
+    visit foods_path
+    expect(page).to have_content('Meat')
+  end
+
+  it 'I cannot see foods when I delete a food' do
+    sign_up
+    add_food
+    visit foods_path
+    click_link 'Delete'
+    accept_alert
+    expect(page).to have_content('No foods')
+  end
 end
