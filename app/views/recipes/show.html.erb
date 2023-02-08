@@ -12,8 +12,10 @@
   </div>
   <p><%=@recipe.description%></p>
   <div>
-    <button><%=link_to "Generate Shopping List", recipe_path(@recipe.id) %></button>
-    <button><%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %></button>
+    <% if can? :update, @recipe%>
+      <button><%=link_to "Generate Shopping List", recipe_path(@recipe.id) %></button>
+      <button><%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %></button>
+    <%end%>
   </div>
   <table class="table">
       <thead>

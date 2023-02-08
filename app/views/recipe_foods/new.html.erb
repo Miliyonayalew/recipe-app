@@ -5,7 +5,7 @@
     <%= f.label :quantity%><br>
     <%= f.number_field :quantity, placeholder: 'Quantity', required: true%><br>
     <%= f.label :food_id, "Food" %><br>
-    <%= f.collection_select(:food_id, Food.all, :id, :name)%><br>
+    <%= f.collection_select(:food_id, Food.where(user_id: @current_user), :id, :name)%><br>
     <%= f.submit "Add ingredient"%>
   <%end%>
 </section>
