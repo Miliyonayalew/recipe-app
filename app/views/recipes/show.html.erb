@@ -2,8 +2,32 @@
   <h2><%=@recipe.name%></h2>
   <div>
     <p>Preparation time: <%=@recipe.preparation_time%> minutes</p>
-    <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+    <div class='public_logo'>
+      <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+      <div class="<%=@recipe.public ? 'public' : 'not_public'%>">
+        <span class="<%=@recipe.public ? 'public_switch' : 'not_public_switch'%>"></span>
+      </div>
+    </div>
     <p>Cooking time: <%=@recipe.cooking_time%> minutes</p>
   </div>
   <p><%=@recipe.description%></p>
+  <div>
+    <% if can? :update, @recipe%>
+      <button><%=link_to "Generate Shopping List", recipe_path(@recipe.id) %></button>
+      <button><%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %></button>
+    <%end%>
+  </div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render 'ingredient'%>
+      </tbody>
+  </table>
 </section>

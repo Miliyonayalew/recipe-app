@@ -30,7 +30,7 @@ class FoodsController < ApplicationController
     else
       flash[:error] = 'Food could not be deletd.'
     end
-    redirect_to foods_path
+    redirect_to request.referrer
   end
 
   private
