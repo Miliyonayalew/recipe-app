@@ -16,9 +16,7 @@ class RecipeFoodsController < ApplicationController
   def destroy
     @recipe_food = RecipeFood.find(params[:id])
     @recipe_foods = RecipeFood.where(recipe_id: @recipe_food.recipe_id).where(food_id: @recipe_food.food_id)
-    @recipe_foods.each do |recipe_food|
-      recipe_food.destroy
-    end
+    @recipe_foods.each(&:destroy)
     redirect_to request.referrer
   end
 
