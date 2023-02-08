@@ -1,0 +1,20 @@
+<h1>Shopping List<h1>
+  <% if @foods.length == 0 %>
+    <h2>There are no missing ingredients that must be purchased.</h2>
+  <% else %>
+    <h2>Amount of ingredients need to buy <%= @missing_ingredients.length %></h2>
+    <h2>Total value of foods neded <%= @total_price %> $</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @missing_ingredients.each do |ingredient| %>
+          <%= render 'shopping_list', ingredient: ingredient %>
+        <% end %>
+      </tbody>
+  <% end %>
