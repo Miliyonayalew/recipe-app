@@ -24,10 +24,7 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Recipe APP</b></h3>
 
 </div>
 
@@ -202,17 +199,17 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Miliyon Ayalew**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Miliyonayalew](https://github.com/Miliyonayalew/)
+- Twitter: [@Miliyonayalew](https://twitter.com/MilaAyalew)
+- LinkedIn: [Miliyonayalew](https://www.linkedin.com/in/miliyon-ayalew-210808131/)
 
-👤 **Author2**
+👤 **David Tamayo**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@IngDavidTM](https://github.com/IngDavidTM)
+- Twitter: [@David5TM](https://twitter.com/David5TM)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ing-david-tamayo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
