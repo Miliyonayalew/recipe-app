@@ -13,7 +13,7 @@
   <p><%=@recipe.description%></p>
   <div>
     <button><%=link_to "Generate Shopping List", recipe_path(@recipe.id) %></button>
-    <button><%=link_to "Add ingredient", new_food_path %></button>
+    <button><%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %></button>
   </div>
   <table class="table">
       <thead>
