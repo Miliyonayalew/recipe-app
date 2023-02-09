@@ -25,4 +25,16 @@ RSpec.describe User, type: :model do
       expect(subject).to be_valid
     end
   end
+
+  context 'Testing associations' do
+    it 'User should have many recipes items' do
+      subject = User.reflect_on_association(:recipes)
+      expect(subject.macro).to eq(:has_many)
+    end
+
+    it 'User should have many food items' do
+      subject = User.reflect_on_association(:foods)
+      expect(subject.macro).to eq(:has_many)
+    end
+  end
 end
