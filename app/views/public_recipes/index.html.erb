@@ -1,5 +1,7 @@
+<section class='recipes_index flex_column'>
+<h2>Public Recipes</h2>
 <%@recipes.each do |recipe|%>
-  <article>
+  <article class="recipe_card">
     <%=link_to recipe_path(id: recipe.id) do%>
     <div>
       <h2><%=recipe.name%></h2>
@@ -17,3 +19,4 @@
     </div>
   </article>
 <%end%>
+</section>
