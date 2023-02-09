@@ -1,8 +1,8 @@
 require 'rails_helper'
-require_relative 'actions_helper'
+require_relative 'actions_helper_food'
 
 RSpec.describe Food, type: :system do
-  include ActionsHelper
+  include ActionsHelperFood
   it 'I can see the foods title' do
     sign_up
     expect(page).to have_content('Foods')
