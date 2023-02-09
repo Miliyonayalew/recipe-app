@@ -26,8 +26,3 @@
   height: 2rem;
   padding: 0.5rem;
 }
-
-.flex_column {
-  display: flex;
-  flex-direction: column;
-}

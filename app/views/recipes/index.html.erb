@@ -1,4 +1,4 @@
-<section>
+<section class='recipes_index flex_column'>
   <button><%=link_to "New Recipe", new_recipe_path %></button>
   <% if @recipes.count > 0%>
     <%= render 'recipe_card'%>

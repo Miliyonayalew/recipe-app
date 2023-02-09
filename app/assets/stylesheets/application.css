@@ -34,38 +34,7 @@ a {
   box-sizing: border-box;
 }
 
-.public {
-  position: relative;
-  width: 60px;
-  height: 34px;
-  border-radius: 17px;
-  background-color: #4cd964;
-}
-
-.public_switch {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #fff;
-}
-
-.not_public {
-  position: relative;
-  width: 60px;
-  height: 34px;
-  border-radius: 17px;
-  background-color: #d8d8d8;
-}
-
-.not_public_switch {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #fff;
+.flex_column {
+  display: flex;
+  flex-direction: column;
 }
