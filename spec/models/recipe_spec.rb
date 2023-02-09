@@ -51,4 +51,16 @@ RSpec.describe Recipe, type: :model do
       expect(@recipe.user_id).to be_present
     end
   end
+
+  context 'Testing associations' do
+    it 'Recipe should belong to a user' do
+      @recipe = Recipe.reflect_on_association(:user)
+      expect(@recipe.macro).to eq(:belongs_to)
+    end
+
+    it 'Recipe should have many recipe foods' do
+      @recipe = Recipe.reflect_on_association(:recipe_foods)
+      expect(@recipe.macro).to eq(:has_many)
+    end
+  end
 end
