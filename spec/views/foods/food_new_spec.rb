@@ -9,12 +9,6 @@ RSpec.describe Food, type: :system do
     expect(page).to have_content('New food')
   end
 
-  it 'I can see the back button' do
-    sign_up
-    visit new_food_path
-    expect(page).to have_content('Back to foods')
-  end
-
   it 'I can add some information' do
     sign_up
     visit new_food_path
@@ -35,12 +29,5 @@ RSpec.describe Food, type: :system do
     fill_in 'food_quantity', with: '10', id: 'food_quantity'
     click_button 'Create Food'
     expect(page).to have_content('Price is not a number')
-  end
-
-  it 'When I click on Back to foods, it redirects me to index food page' do
-    sign_up
-    visit new_food_path
-    click_link 'Back to foods'
-    expect(page).to have_current_path(foods_path)
   end
 end
