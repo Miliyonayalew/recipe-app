@@ -6,8 +6,8 @@ RSpec.describe Recipe, type: :model do
   end
 
   before(:each) do
-    @recipe = Recipe.new(name: 'Burger', description: 'A delicious burger', preparation_time: 10, cooking_time: 20,
-                         user_id: subject.id)
+    @recipe = Recipe.new(user_id: subject.id, name: 'Burger', description: 'A delicious burger', preparation_time: 10,
+                         cooking_time: 20, public: false)
   end
 
   context 'Testing validations' do
