@@ -11,7 +11,7 @@ module ActionsHelperRecipe
 
   def add_recipe
     visit new_recipe_path
-    fill_in 'recipe_name', with: 'Recipe', id: 'recipe_name'
+    fill_in 'recipe_name', with: 'Recipe Name', id: 'recipe_name'
     fill_in 'recipe_preparation_time', with: '20', id: 'recipe_preparation_time'
     fill_in 'recipe_cooking_time', with: '10', id: 'recipe_cooking_time'
     fill_in 'recipe_description', with: 'This is a description', id: 'recipe_description'
