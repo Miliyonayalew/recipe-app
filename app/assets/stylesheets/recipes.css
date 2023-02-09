@@ -113,3 +113,7 @@
   height: 2rem;
   padding: 0.5rem;
 }
+
+.recipe_new .field_select > * {
+  height: 2.5rem;
+}
