@@ -36,4 +36,16 @@ RSpec.describe RecipeFood, type: :model do
       expect(@recipe_food.quantity).to be_present
     end
   end
+
+  context 'Testing associations' do
+    it 'Recipe food should belong to a recipe' do
+      @recipe_food = RecipeFood.reflect_on_association(:recipe)
+      expect(@recipe_food.macro).to eq(:belongs_to)
+    end
+
+    it 'Recipe food should belong to a food' do
+      @recipe_food = RecipeFood.reflect_on_association(:food)
+      expect(@recipe_food.macro).to eq(:belongs_to)
+    end
+  end
 end
