@@ -3,7 +3,7 @@
 <div align="center">
   <h3><b>Recipe APP</b></h3>
   </br>
-  <img src="logo.gif" alt="logo" width="140"  height="auto" />
+  <img src="logo.gif" alt="logo" width="250"  height="auto" />
   <br>
 </div>
 
