@@ -1,6 +1,7 @@
+<section class='sign_in flex_column'>
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { class: "flex_column" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -27,8 +28,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "button" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</section>
