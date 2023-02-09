@@ -16,4 +16,20 @@ RSpec.describe Recipe, type: :system do
     click_link 'Recipe Name'
     expect(page).to have_content('Add ingredient')
   end
+
+  it 'When I click on Add ingredient, it redirects me to recipe foods new page' do
+    sign_up
+    add_recipe
+    click_link 'Recipe Name'
+    click_link 'Add ingredient'
+    expect(page).to have_current_path(new_recipe_recipe_food_path(recipe_id: Recipe.first))
+  end
+
+  it 'When I click on Generate Shopping List, it redirects me to general shopping list index page' do
+    sign_up
+    add_recipe
+    click_link 'Recipe Name'
+    click_link 'Generate Shopping List'
+    expect(page).to have_current_path(general_shopping_list_index_path)
+  end
 end
