@@ -1,3 +1,21 @@
+.foods_index {
+  margin: 3rem auto;
+  max-width: 50rem;
+  gap: 2rem;
+}
+
+.foods_index h1 {
+  align-self: center;
+}
+
+.foods_index div {
+  gap: 2rem;
+}
+
+.foods_index div a {
+  align-self: center;
+}
+
 .food-item div {
   margin: 3rem auto;
   gap: 2rem;
