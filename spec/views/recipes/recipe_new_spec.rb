@@ -17,6 +17,6 @@ RSpec.describe Food, type: :system do
     fill_in 'recipe_cooking_time', with: '10', id: 'recipe_cooking_time'
     fill_in 'recipe_description', with: 'This is a description', id: 'recipe_description'
     click_button 'Create Recipe'
-    expect(page).to have_content('Food was successfully created')
+    expect(page).to have_content('Recipe was successfully created')
   end
 end
