@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+body {
   background-image: url(bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,6 +27,7 @@
   flex-direction: column;
   margin: 2rem;
 }
+
 .button {
   border: none;
   display: inline-block;
@@ -66,11 +67,10 @@ a:hover {
   width: 100%;
   border-collapse: collapse;
   color: #000;
-  background-color: #ffffffd7;
-  
+  background-color: #ffffffd7; 
 }
 
-article{
+article {
   color: #000;
   background-color: #ffffffd7;
 }
