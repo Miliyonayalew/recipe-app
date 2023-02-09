@@ -53,11 +53,14 @@
 
 .recipes_show {
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
   width: 100%;
   max-width: 45rem;
   gap: 2rem;
   align-self: center;
+  color: #000;
+  background-color: #ffffffd7;
+  border-radius: 0.5rem;
 }
 
 .recipes_show h2 {
