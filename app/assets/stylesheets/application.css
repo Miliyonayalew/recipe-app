@@ -46,3 +46,19 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #6699ffab;
+}
+
+.table th {
+  background-color: #6699ffab;
+}
