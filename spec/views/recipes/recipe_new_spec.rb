@@ -5,27 +5,18 @@ RSpec.describe Food, type: :system do
   include ActionsHelperRecipe
   it 'I can see the title' do
     sign_up
-    add_recipe
-    click_link 'Recipe Name'
-    click_link 'Add ingredient'
-    expect(page).to have_content('New Ingredient')
+    visit new_recipe_path
+    expect(page).to have_content('New Recipe')
   end
 
-  it 'I can see the Add ingredient button' do
+  it 'I can add some information' do
     sign_up
-    add_recipe
-    click_link 'Recipe Name'
-    click_link 'Add ingredient'
-    expect(page).to have_content('Add ingredient')
-  end
-
-  it 'I can see the error when a value is different than a number' do
-    sign_up
-    add_recipe
-    click_link 'Recipe Name'
-    click_link 'Add ingredient'
-    fill_in 'recipe_food_quantity', with: '15', id: 'recipe_food_quantity'
-    click_button 'Add ingredient'
-    expect(page).to have_content('Food must exist')
+    visit new_recipe_path
+    fill_in 'recipe_name', with: 'Recipe Name', id: 'recipe_name'
+    fill_in 'recipe_preparation_time', with: '20', id: 'recipe_preparation_time'
+    fill_in 'recipe_cooking_time', with: '10', id: 'recipe_cooking_time'
+    fill_in 'recipe_description', with: 'This is a description', id: 'recipe_description'
+    click_button 'Create Recipe'
+    expect(page).to have_content('Food was successfully created')
   end
 end
