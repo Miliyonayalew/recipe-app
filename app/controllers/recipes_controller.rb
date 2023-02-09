@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
     if @recipe.save
-      redirect_to recipes_path, notice: 'Food was successfully created.'
+      redirect_to recipes_path, notice: 'Recipe was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end

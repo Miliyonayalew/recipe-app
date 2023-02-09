@@ -12,7 +12,7 @@ RSpec.describe Food, type: :system do
   it 'I can see the messages when it is empty' do
     sign_up
     visit general_shopping_list_index_path
-    expect(page).to have_content('There are no missing ingredients that must be purchased.')
+    expect(page).to have_content('There are no missing ingredients that must be purchased')
   end
 
   it 'I can see the total and the name of the food when it is not empty' do
@@ -21,7 +21,7 @@ RSpec.describe Food, type: :system do
     add_recipe
     add_ingredient
     visit general_shopping_list_index_path
-    expect(page).to have_content('Total value of foods neded 10 $')
+    expect(page).to have_content('Total value of foods neded: 10 $')
   end
 
   it 'I can see the name of the food when it is not empty' do

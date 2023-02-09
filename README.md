@@ -27,7 +27,6 @@
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -81,7 +80,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming soon](https://yourdeployedapplicationlink.com)
+- [Coming soon]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,6 +116,8 @@ Install this project with:
 
 ```sh
   Run bundle install 
+  Run rails db:create
+  Run rails db:migrate
 ```
 
 ### Usage
@@ -168,7 +169,7 @@ To run tests, run the following command:
 
 - [ ] **Add Search Recipe and Food**
 - [ ] **Add Pagination or infinite scrolling for the lists.**
-- [ ] **Add**
+- [ ] **Improve the UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,20 +203,6 @@ I would like to thank the following people for their support and guidance:
 - Coding partners
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 
 <!-- LICENSE -->

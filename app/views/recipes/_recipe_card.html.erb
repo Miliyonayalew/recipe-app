@@ -5,11 +5,11 @@
           <h2><%=recipe.name%></h2>
         <%end%>
         <% if can? :update, recipe%>
-          <%= link_to 'REMOVE', recipe_path(recipe), data: {
+          <%= link_to 'REMOVE', recipe_path(recipe), class: "delete",data: {
             turbo_method: :delete, turbo_confirm: "Are you sure?"
           } %>
         <%end%>
       </div>
-      <p><%=recipe.description%></p>
+      <p>Description for the recipe:<br><%=recipe.description%></p>
     </article>
   <%end%>
