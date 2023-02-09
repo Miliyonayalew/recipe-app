@@ -1,0 +1,7 @@
+.food-item div {
+  margin: 3rem auto;
+  gap: 2rem;
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+}
