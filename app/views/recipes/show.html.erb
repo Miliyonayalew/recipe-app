@@ -1,6 +1,6 @@
-<section>
+<section class='recipes_show flex_column'>
   <h2><%=@recipe.name%></h2>
-  <div>
+  <div class='recipe_information'>
     <p>Preparation time: <%=@recipe.preparation_time%> minutes</p>
     <div class='public_logo'>
       <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
@@ -11,10 +11,10 @@
     <p>Cooking time: <%=@recipe.cooking_time%> minutes</p>
   </div>
   <p><%=@recipe.description%></p>
-  <div>
+  <div class='recipe_buttons'>
     <% if can? :update, @recipe%>
-      <button><%=link_to "Generate Shopping List", general_shopping_list_index_path %></button>
-      <button><%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) %></button>
+      <%=link_to "Generate Shopping List", general_shopping_list_index_path, class: "button" %>
+      <%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe), class: "button" %>
     <%end%>
   </div>
   <table class="table">

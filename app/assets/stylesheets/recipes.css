@@ -50,3 +50,37 @@
   align-items: center;
   border-radius: 0.5rem;
 }
+
+.recipes_show {
+  margin: 3rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 45rem;
+  gap: 2rem;
+  align-self: center;
+}
+
+.recipes_show h2 {
+  align-self: center;
+}
+
+.recipe_information {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.recipe_information p {
+  flex: 1 1 50%;
+}
+
+.public_logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recipe_buttons {
+  display: flex;
+  justify-content: space-between;
+}
