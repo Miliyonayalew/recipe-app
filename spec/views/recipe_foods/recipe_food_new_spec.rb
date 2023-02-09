@@ -11,12 +11,12 @@ RSpec.describe Food, type: :system do
     expect(page).to have_content('New Ingredient')
   end
 
-  it 'I can see the Add ingredient button' do
+  it 'I can see Quantity' do
     sign_up
     add_recipe
     click_link 'Recipe Name'
     click_link 'Add ingredient'
-    expect(page).to have_content('Add ingredient')
+    expect(page).to have_content('Quantity')
   end
 
   it 'I can see the error when a value is different than a number' do
