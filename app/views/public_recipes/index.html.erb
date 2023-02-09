@@ -1,5 +1,8 @@
 <section class='recipes_index flex_column'>
 <h2>Public Recipes</h2>
+<% if @recipes.length == 0 %>
+  <p>There are no public recipes yet.</p>
+<% else %>
 <%@recipes.each do |recipe|%>
   <article class="recipe_card">
     <%=link_to recipe_path(id: recipe.id) do%>
@@ -18,5 +21,6 @@
       <p>Total price: <%=total_price%> $</p>
     </div>
   </article>
+  <%end%>
 <%end%>
 </section>
