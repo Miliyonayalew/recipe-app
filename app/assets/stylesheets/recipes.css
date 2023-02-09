@@ -84,3 +84,32 @@
   display: flex;
   justify-content: space-between;
 }
+
+.recipe_new {
+  align-items: center;
+  height: 100vh;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+
+.recipe_new h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.recipe_new form {
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.recipe_new .field {
+  width: 50%;
+  max-width: 30rem;
+}
+
+.recipe_new .field > * {
+  width: 100%;
+  height: 2rem;
+  padding: 0.5rem;
+}
