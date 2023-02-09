@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'actions_helper'
 
-RSpec.describe Recipe, type: :system do
+RSpec.describe Food, type: :system do
   include ActionsHelper
   it 'I can see the foods title' do
     sign_up
