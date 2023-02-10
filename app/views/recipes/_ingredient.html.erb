@@ -7,8 +7,9 @@
             <td>
               <% if can? :update, @recipe%>
                 <%if recipe_food%>
+                  <%= link_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food)%>
                   <%= link_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), class: "delete",
-                  data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+                    data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
                   %>
                 <%end%>
               <%else%>
