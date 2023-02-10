@@ -5,6 +5,7 @@ databases:
 services:
   - type: web
     name: recipe
+    plan: free
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails s"
@@ -20,4 +21,3 @@ services:
     ipAllowList: []
     plan: free
     maxmemoryPolicy: noeviction
-      
