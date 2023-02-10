@@ -1,0 +1,14 @@
+.general_shopping_list {
+  margin: 3rem auto;
+  max-width: 50rem;
+  gap: 2rem;
+}
+
+.general_shopping_list h1 {
+  align-self: center;
+}
+
+.general_shopping_list div {
+  display: flex;
+  justify-content: space-between;
+}

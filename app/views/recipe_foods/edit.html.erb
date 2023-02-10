@@ -1,0 +1,11 @@
+<section class='recipe_new flex_column'>
+  <h2>Update Ingredient</h2>
+  <%= form_with model: [@recipe, @recipe_food], class: 'flex_column' do |f| %>
+    <div class="field">
+    <%= f.label :quantity%><br>
+    <%= f.number_field :quantity, placeholder: 'Quantity', required: true%><br>
+    </div>
+    </div>
+    <%= f.submit "Modify ingredient", class: "button"%>
+  <%end%>
+</section>

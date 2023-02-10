@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipeApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <section class='notice'>
+    <p style="color: green" class="notice"><%= notice %></p> 
+    <p style="color: red" class="alert"><%= alert %></p>
+  <%= render 'layouts/header'%>
+  </section>   
+    <%= yield %>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>

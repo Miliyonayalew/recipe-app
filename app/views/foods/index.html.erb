@@ -1,0 +1,24 @@
+<section class='foods_index flex_column'>
+  <h1>Foods</h1>
+  <div class="add-food flex_column"><%= link_to "Add food", new_food_path, class:"button"%>
+  <% if @foods.count > 0%>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Measurment Unit</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @foods.each do |food| %>
+          <%= render food%>
+        <% end %>
+      </tbody>
+    <%else%>
+      <h2>No foods</h2>
+  <%end%>
+  </div>
+</section>

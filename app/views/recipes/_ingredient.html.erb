@@ -1,0 +1,21 @@
+<% @foods.each do |food| %>
+  <%food.recipe_foods.where(recipe_id: @recipe.id).each do |recipe_food|%>
+      <tr>
+            <td><%= food.name %></td>
+            <td><%= recipe_food.nil? ? 0 : recipe_food.quantity%></td>
+            <td>$ <%= food.price * (recipe_food.nil? ? 0 : recipe_food.quantity) %></td>
+            <td>
+              <% if can? :update, @recipe%>
+                <%if recipe_food%>
+                  <%= link_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food)%>
+                  <%= link_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), class: "delete",
+                    data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+                  %>
+                <%end%>
+              <%else%>
+                <p>No actions allowed</p>
+              <%end%>
+            </td>
+      </tr>
+  <% end %>
+<% end %>

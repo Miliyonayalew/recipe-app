@@ -1,0 +1,26 @@
+<section class='recipes_index flex_column'>
+<h2>Public Recipes</h2>
+<% if @recipes.length == 0 %>
+  <p>There are no public recipes yet.</p>
+<% else %>
+<%@recipes.each do |recipe|%>
+  <article class="recipe_card">
+    <%=link_to recipe_path(id: recipe.id) do%>
+    <div>
+      <h2><%=recipe.name%></h2>
+      <h3>By: <%=recipe.user.name%></h3>
+    </div>
+    <%end%>
+    <div>
+      <p>Total food items: <%=recipe.recipe_foods.length%></p>
+      <%total_price = 0%>
+      <%recipe.recipe_foods.each do |recipe_food|%>
+        <%price = recipe_food.quantity* recipe_food.food.price%>
+        <%total_price = total_price + price%>
+      <%end%>
+      <p>Total price: <%=total_price%> $</p>
+    </div>
+  </article>
+  <%end%>
+<%end%>
+</section>

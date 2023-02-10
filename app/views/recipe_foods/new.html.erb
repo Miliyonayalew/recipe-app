@@ -1,0 +1,15 @@
+<section class='recipe_new flex_column'>
+  <h2>New Ingredient</h2>
+  <%= form_with url: recipe_recipe_foods_path, class: 'flex_column', scope: :recipe_food do |f| %>
+    <%= render "shared/error_form_message", resource: @recipe_food %>
+    <div class="field">
+    <%= f.label :quantity%><br>
+    <%= f.number_field :quantity, placeholder: 'Quantity', required: true%><br>
+    </div>
+    <div class="field field_select">
+    <%= f.label :food_id, "Food" %><br>
+    <%= f.collection_select(:food_id, Food.where(user_id: @current_user), :id, :name)%><br>
+    </div>
+    <%= f.submit "Add ingredient", class: "button"%>
+  <%end%>
+</section>

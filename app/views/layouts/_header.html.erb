@@ -1,0 +1,16 @@
+<% if current_user %>
+  <nav>
+    <div class="nav_links">
+      <%= link_to "Home" , root_path %>
+    </div>
+    <div class="nav_links">
+      <%= link_to "Recipes" , recipes_path %>
+    </div>
+    <div class="nav_links">
+      <%= link_to "Public Recipes" , public_recipes_path %>
+    </div>
+    <div class="nav_links">
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "logout_button"  %>
+    </div>
+  </nav>
+<%end%>

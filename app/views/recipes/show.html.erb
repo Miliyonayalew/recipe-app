@@ -1,0 +1,33 @@
+<section class='recipes_show flex_column'>
+  <h2><%=@recipe.name%></h2>
+  <div class='recipe_information'>
+    <p>Preparation time: <%=@recipe.preparation_time%> minutes</p>
+    <div class='public_logo'>
+      <p><%=@recipe.public ? 'Public' : 'Not Public'%></p>
+      <div class="<%=@recipe.public ? 'public' : 'not_public'%>">
+        <span class="<%=@recipe.public ? 'public_switch' : 'not_public_switch'%>"></span>
+      </div>
+    </div>
+    <p>Cooking time: <%=@recipe.cooking_time%> minutes</p>
+  </div>
+  <p><%=@recipe.description%></p>
+  <div class='recipe_buttons'>
+    <% if can? :update, @recipe%>
+      <%=link_to "Generate Shopping List", general_shopping_list_index_path, class: "button" %>
+      <%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe), class: "button" %>
+    <%end%>
+  </div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render 'ingredient'%>
+      </tbody>
+  </table>
+</section>

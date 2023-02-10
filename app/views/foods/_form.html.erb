@@ -1,0 +1,25 @@
+
+<%= form_with(model: food, html: { class: "flex_column" }) do |form| %>
+<%= render "shared/error_form_message", resource: food %>
+  <div class="field">
+    <%= form.label "Food name", style: "display: block" %>
+    <%= form.text_field :name, required: true, class: "form-input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Measurment Unit(g, kg, l, ml)", style: "display: block" %>
+    <%= form.text_field :measurement_unit, required: true, class: "form-input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Unit price", style: "display: block" %>
+    <%= form.text_field :price, required: true, class: "form-input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity, required: true, class: "form-input" %>
+  </div>
+
+  <%= form.submit "Create Food", class: "button"%>
+<% end %>
