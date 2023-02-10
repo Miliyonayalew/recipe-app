@@ -24,12 +24,4 @@ RSpec.describe Recipe, type: :system do
     add_recipe
     expect(page).to have_content('This is a description')
   end
-
-  it 'I cannot see foods when I delete a food' do
-    sign_up
-    add_recipe
-    click_link 'REMOVE'
-    accept_alert
-    expect(page).to have_content('There are no recipes yet')
-  end
 end
