@@ -79,8 +79,9 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+- Live deployment link works only for one week
 
-- [Coming soon]()
+- [Recipe](https://recipe-web-8kz8.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
